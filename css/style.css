@@ -39,9 +39,9 @@ a {
   top: 10%;
 }
 
-#fieldTable tr td {
+#fieldTable td {
   background-color: #65812A;
-  padding: 1%;
+  padding: 15%;
 }
 
 .footer {
