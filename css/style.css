@@ -1,26 +1,36 @@
-.html {
-  width: 100%;
-  background-color: #000000;
+a {
+	text-decoration: none;
+	color: #DDDDDD;
 }
 
 .body {
   width: 100%;
-  background-color: #000000;
 }
 
 .mainContainer {
   width: 100%;
-  background-color: #51F8E3;
+  background-color: #DDDDDD;
 }
 
-.topBar {
+.header {
   width: 100%;
-  background-color: black;
+}
+
+.navigation {
+	display: flex;
+	background-color: #888888;
+}
+
+.navigation div {
+	width: 20%;
+	text-align: center;
+	background-color: inherit;
 }
 
 .mainPage {
-  width: 100%;
-  background-color: 856FA9D;
+  width: 90%;
+  margin-left: 5%;
+  background-color: #856FA9D;
 }
 
 #workField {
@@ -36,5 +46,12 @@
 
 .footer {
   width: 100%;
-  background-color: black;
+  background-color: #888888;
+  text-align: center;
+}
+
+.footer h3 {
+	color: #DDDDDD;
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
