@@ -1,0 +1,40 @@
+.html {
+  width: 100%;
+  background-color: #000000;
+}
+
+.body {
+  width: 100%;
+  background-color: #000000;
+}
+
+.mainContainer {
+  width: 100%;
+  background-color: #51F8E3;
+}
+
+.topBar {
+  width: 100%;
+  background-color: black;
+}
+
+.mainPage {
+  width: 100%;
+  background-color: 856FA9D;
+}
+
+#workField {
+  width: 80%;
+  left: 10%;
+  top: 10%;
+}
+
+#fieldTable tr td {
+  background-color: #65812A;
+  padding: 1%;
+}
+
+.footer {
+  width: 100%;
+  background-color: black;
+}
