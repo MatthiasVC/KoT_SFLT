@@ -14,10 +14,10 @@ function loadMap()
 		for (j = 0; j < table.rows[0].cells.length; j++) {
 			var cellContent = table.rows[i].cells[j].innerHTML;
 			if (cellContent == "")
-				cellContent = "<img src='/images/totem.png' alt='TOTEM'/>";
+				cellContent = "<img src='images/totem.png' alt='TOTEM'/>";
 			else if (cellContent == "CHEST")
-				cellContent = "<svg src='/images/chestBottom.svg' alt='CHEST'/>
-			<svg src='/images/chestTop.svg' alt='CHEST'/>"
+				cellContent = "<svg src='images/chestBottom.svg' alt='CHEST'/>
+			<svg src='images/chestTop.svg' alt='CHEST'/>"
 		}
 	}
 }
