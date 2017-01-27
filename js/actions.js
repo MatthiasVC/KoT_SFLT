@@ -1,4 +1,4 @@
-/*$(document).load(loadMap());
+$(document).load(loadMap());
 
 function loadMap()
 {
@@ -16,7 +16,7 @@ function loadMap()
 			}
 		}
 	}
-}*/
+}
 
 $('#fieldTable td').hover(function() {
 	$(this).css('background-color', '#E521D8')
