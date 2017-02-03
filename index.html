@@ -21,207 +21,146 @@
     <div class="mainPage">
       <div id="explanationSector">
         <h3>Instructions:</h3>
-        <p>Right-click a cell of the field and change it to either an open field, or a rock.
+        <p>First select on which stage you are.</p>
+        <p>Then right-click a cell of the field and change it to either an open field, or a rock.
          If you have only one possible map left, it will show which one it is.</p>
+         <select id="stageSelect">
+         	<option value="" disabled selected>-- Select a stage --</option>
+         	<option value="1">Stage 1</option>
+           	<option value="2">Stage 2</option>
+           	<option value="3">Stage 3</option>
+            <option value="4">Stage 4</option>
+         </select>
+         <br/><br/>
       </div>
       <div id="workField">
+      	<div id="contextMenu">
+        	<div id="quit">X</div>
+            <div id="list">
+                <ul>
+                    <li>Rock</li>
+                    <li>Open</li>
+                    <li>Statue</li>
+                </ul>
+            </div>
+        </div>
         <table id="fieldTable">
           <tr>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           
           <tr>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           
           <tr>
-            <td>START
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>CHEST
-            </td>
+            <td class="unChangable">START</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="unChangable">CHEST</td>
           </tr>
           
           <tr>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           
           <tr>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
         </table>
       </div>
       
       <div id="resultField">
         <div id="explanationSector">
-          <h3>You have <u>8</u> maps still possible</h3>
+          <h3 id="amountOfMapsPossible">You have 6 maps still possible</h3>
         </div>
         <table id="resultTable">
           <tr>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           
           <tr>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           
           <tr>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
+            <td class="unChangable">START</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="unChangable">CHEST</td>
           </tr>
           
           <tr>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           
           <tr>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-          </tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>            
         </table>
       </div>
     </div>

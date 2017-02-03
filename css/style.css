@@ -3,17 +3,21 @@ a {
 	color: #DDDDDD;
 }
 
+ul li {
+	list-style-type: none;
+}
+
 .body {
-  width: 100%;
+	width: 100%;
 }
 
 .mainContainer {
-  width: 100%;
-  background-color: #DDDDDD;
+  	width: 100%;
+ 	background-color: #DDDDDD;
 }
 
 .header {
-  width: 100%;
+	width: 100%;
 }
 
 .navigation {
@@ -28,25 +32,54 @@ a {
 }
 
 .mainPage {
-  width: 90%;
-  margin-left: 5%;
-  background-color: #856FA9D;
+	width: 90%;
+	margin-left: 5%;
+	background-color: #856FA9D;
 }
 
 #workField {
-  width: 80%;
-  left: 10%;
-  top: 10%;
+	width: 80%;
+	left: 10%;
+	top: 10%;
+}
+
+#contextMenu {
+	background-color: grey;
+ 	position: absolute;
+  	top: 0;
+  	left: 0;
+	display: none;
+	z-index: 10;
+	border: 1px solid black;
+}
+
+#quit {
+	float: right;
+	display: block;
+	background-color: blue;
+}
+
+ul li:hover {
+	background-color: red;
+}
+
+#list {
+	float:left;
 }
 
 #fieldTable td {
-  background-color: black;
+	background-color: black;
+	text-align: center;
+}
+
+#fieldTable td:hover {
+	background-color: green;
 }
 
 .footer {
-  width: 100%;
-  background-color: #888888;
-  text-align: center;
+	width: 100%;
+	background-color: #888888;
+	text-align: center;
 }
 
 .footer h3 {
