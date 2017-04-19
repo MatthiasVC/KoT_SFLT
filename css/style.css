@@ -1,6 +1,6 @@
 a {
 	text-decoration: none;
-	color: #DDDDDD;
+	color: #333333;
 }
 
 ul li {
@@ -43,6 +43,29 @@ ul li {
 	top: 10%;
 }
 
+#resultTable {
+	display: none;
+}
+
+#fieldTable, #resultTable { 
+	table-layout: fixed; 
+	word-break: break-all;
+}
+
+#fieldTable td, #resultTable td { 
+  	width: 100px;
+  	height: 120px;
+  	word-wrap: break-word;
+	border: 1px solid;
+	overflow: hidden;
+	background-color: black;
+	text-align: center;
+}
+
+#fieldTable td:hover {
+	background-color: green;
+}
+
 #contextMenu {
 	background-color: grey;
  	position: absolute;
@@ -65,15 +88,6 @@ ul li:hover {
 
 #list {
 	float:left;
-}
-
-#fieldTable td {
-	background-color: black;
-	text-align: center;
-}
-
-#fieldTable td:hover {
-	background-color: green;
 }
 
 .footer {

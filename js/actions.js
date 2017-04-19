@@ -16,6 +16,7 @@ $(document).ready(function() {
 						"T", "T", "T", "T", "T", "T", "T", "T", 
 						"T", "T", "T", "T", "T", "T", "T", "T"];
 	
+
 	function updateInternalMap() {
 		$("#fieldTable td").each(function() {
 			var value = $(this).html();
@@ -42,7 +43,7 @@ $(document).ready(function() {
 	}
 	
 	function loadAllMaps() {
-		$.getJSON("https://raw.githubusercontent.com/MatthiasVC/KoT_SFLT/master/json/allMaps.json", 			   		function(json) {
+		$.getJSON("https://raw.githubusercontent.com/MatthiasVC/KoT_SFLT/master/json/allMaps.json", function(json) {
 			var selectedStage =$("#stageSelect").find(":selected").text();
 			selectedStage = selectedStage.replace(/\s+/g, '');
 			maps = json[selectedStage];
@@ -94,12 +95,17 @@ $(document).ready(function() {
 	function displayOnlyRemainingMap() {
 		var solutionMap = maps[possibleMaps[0]];
 		var i = 0;
+		var values = [];
+		
+		$("#resultTable").css("display", "block");
+		for (var key in solutionMap)
+			for (var val in solutionMap[key])
+				values.push(solutionMap[key][val]);
 		$("#resultTable td").each(function() {
-			if (solutionMap[i] == "O") {
+			if (values[i] == "R") {
+				$(this).html("<img src='../images/rock.png' alt='ROCK'/>");
 			}
-			else if (solutionMap[i] == "R") {
-				$(this).html("<img src='images/rock.png' alt='ROCK'/>");
-			}
+			i++;
 		});
 	}
 	
@@ -107,10 +113,10 @@ $(document).ready(function() {
 	$("#fieldTable td").each(function() {
 		var value = $(this).html();
 		if (value == "CHEST") {
-			$(this).html("<img src='images/chest.png' alt='CHEST'/>");
+			$(this).html("<img src='../images/chest.png' alt='CHEST'/>");
 		}
 		else if (value == "") {
-			$(this).html("<img src='images/totem.png' alt='TOTEM'/>");
+			$(this).html("<img src='../images/totem.png' alt='TOTEM'/>");
 		}
 	});
 	
@@ -129,7 +135,7 @@ $(document).ready(function() {
 		if ($(this).hasClass('unChangable')) {
 			return;
 		}
-		$('#contextMenu').css({'top':mouseY,'left':mouseX}).fadeIn('slow');
+		$('#contextMenu').css({'top':mouseY,'left':mouseX}).fadeIn(200);
 	});
 	
 	$('#quit').mousedown(function() {
@@ -140,23 +146,23 @@ $(document).ready(function() {
 		var value = $(this).html();
 		if (hasImg) {
 			if (value === "Rock") {
-				selectedCell.children('img').attr({src:"images/rock.png", alt:"ROCK"});
+				selectedCell.children('img').attr({src:"../images/rock.png", alt:"ROCK"});
 			}
 			else if (value === "Open") {
 				selectedCell.children('img').parent().html("");
 			}
 			else {
-				selectedCell.children('img').attr({src:"images/totem.png", alt:"TOTEM"});
+				selectedCell.children('img').attr({src:"../images/totem.png", alt:"TOTEM"});
 			}
 		}
 		else {
 			if (value === "Rock") {
-				selectedCell.html("<img src='images/rock.png' alt='ROCK'/>");
+				selectedCell.html("<img src='../images/rock.png' alt='ROCK'/>");
 			}
 			else if (value === "Open") {
 			}
 			else {
-				selectedCell.html("<img src='images/totem.png' alt='TOTEM'/>");
+				selectedCell.html("<img src='../images/totem.png' alt='TOTEM'/>");
 			}
 		}
 		$('#contextMenu').css({'display':'none'});
