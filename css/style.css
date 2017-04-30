@@ -42,6 +42,12 @@ ul li {
 	background-color: #856FA9D;
 }
 
+.sideByContent {
+	display: inline-block;
+	width: 49%;
+	margin: 0;
+}
+
 #workField {
 	width: 80%;
 	left: 10%;
@@ -52,19 +58,41 @@ ul li {
 	display: none;
 }
 
-#fieldTable, #resultTable { 
+.possibleTable {
+	margin-top: 50px;
+}
+
+#fieldTable, #resultTable, .possibleTable { 
 	table-layout: fixed; 
 	word-break: break-all;
 }
 
-#fieldTable td, #resultTable td { 
-  	width: 100px;
-  	height: 120px;
+.possibleTable td {
+	width: 20px;
+  	height: 32px;
   	word-wrap: break-word;
 	border: 1px solid;
 	overflow: hidden;
 	background-color: black;
 	text-align: center;
+}
+
+.possibleTable td img {
+	width: 20px;
+}
+
+#fieldTable td, #resultTable td { 
+  	width: 80px;
+  	height: 96px;
+  	word-wrap: break-word;
+	border: 1px solid;
+	overflow: hidden;
+	background-color: black;
+	text-align: center;
+}
+
+#fieldTable td img {
+	width: 70px;
 }
 
 #fieldTable td:hover {

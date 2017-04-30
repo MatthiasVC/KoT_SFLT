@@ -40,6 +40,7 @@ $(document).ready(function() {
 		});
 		
 		updatePossibleMaps();
+		displayAllRemainingMaps();
 	}
 	
 	function loadAllMaps() {
@@ -109,6 +110,33 @@ $(document).ready(function() {
 		});
 	}
 	
+	function hideAllRemainingMaps() {
+		$(".possibleTable").each(function(index, element) {
+            $(this).find("td").each(function() {
+				$(this).html("");
+			});
+        });
+	}
+	
+	function displayAllRemainingMaps() {
+		hideAllRemainingMaps();
+		for (var j = 0; j < possibleMaps.length; j++) {
+			var solutionMap = maps[possibleMaps[j]];
+			var i = 0;
+			var values = [];
+			
+			for (var key in solutionMap)
+				for (var val in solutionMap[key])
+					values.push(solutionMap[key][val]);
+			$(".possibleTable").eq(j).find("td").each(function() {
+				if (values[i] == "R") {
+					$(this).html("<img src='../images/rock.png' alt='ROCK'/>");
+				}
+				i++;
+			});
+		}
+	}
+	
 	// Fill in all fields with visual
 	$("#fieldTable td").each(function() {
 		var value = $(this).html();
@@ -168,7 +196,21 @@ $(document).ready(function() {
 		$('#contextMenu').css({'display':'none'});
 		updateInternalMap();
 	});
+	
+	$("#showContentButton").click(function () {
+		if(document.getElementById('spoiler').style.display=='none') {
+			if (maps === undefined || possibleMaps.length == 0)
+				return;
+			document.getElementById('spoiler').style.display=''
+			displayAllRemainingMaps();
+		}
+		else {
+			document.getElementById('spoiler').style.display='none'
+			hideAllRemainingMaps();
+		}
+	});
 });
+
 
 // Remember mouse position
 var mouseX;
