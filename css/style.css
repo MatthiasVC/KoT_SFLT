@@ -5,7 +5,7 @@ a {
 
 
 a:hover {
-	color: #888888;
+	color: #AAAAAA;
 }
 
 ul li {
@@ -39,7 +39,7 @@ ul li {
 .mainPage {
 	width: 90%;
 	margin-left: 5%;
-	background-color: #856FA9D;
+	background-color: #EEEEEE;
 }
 
 .sideByContent {
@@ -116,7 +116,7 @@ ul li {
 }
 
 ul li:hover {
-	background-color: #AAAAAA;
+	background-color: #555555;
 }
 
 #contextMenu ul li:hover {
